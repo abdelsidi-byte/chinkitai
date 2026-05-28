@@ -16,7 +16,7 @@
             background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #16213e 100%);
             color: #fff;
             min-height: 100vh;
-            line-height: 1.8;
+            line-height: 1.9;
         }
 
         .container {
@@ -62,6 +62,122 @@
             border-radius: 30px;
             font-size: 14px;
             margin-top: 25px;
+        }
+
+        /* Service Detail Section */
+        .service-detail {
+            background: rgba(255,255,255,0.02);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .service-detail-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .service-detail-icon {
+            font-size: 50px;
+            background: linear-gradient(135deg, rgba(102,126,234,0.2) 0%, rgba(118,75,162,0.2) 100%);
+            width: 90px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            border: 1px solid rgba(102,126,234,0.3);
+        }
+
+        .service-detail-title {
+            flex: 1;
+        }
+
+        .service-detail-title h3 {
+            font-size: 28px;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .service-detail-title .price {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 5px 20px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .service-section-title {
+            font-size: 20px;
+            color: #667eea;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(102,126,234,0.3);
+        }
+
+        .service-section-title:first-of-type {
+            margin-top: 0;
+        }
+
+        .service-detail ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-detail li {
+            padding: 12px 0;
+            padding-right: 30px;
+            position: relative;
+            color: #c0c0d0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .service-detail li:last-child {
+            border-bottom: none;
+        }
+
+        .service-detail li::before {
+            content: "✓";
+            position: absolute;
+            right: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .deliverables {
+            background: rgba(102,126,234,0.1);
+            border-radius: 15px;
+            padding: 20px 25px;
+            margin-top: 20px;
+        }
+
+        .deliverables h4 {
+            color: #667eea;
+            margin-bottom: 12px;
+        }
+
+        .example-box {
+            background: rgba(118,75,162,0.1);
+            border: 1px solid rgba(118,75,162,0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .example-box h4 {
+            color: #764ba2;
+            margin-bottom: 12px;
+        }
+
+        .example-box p {
+            color: #b0b0c0;
+            font-size: 14px;
         }
 
         /* Products Section */
@@ -110,70 +226,6 @@
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s;
-        }
-
-        .product-link:hover {
-            color: #764ba2;
-            gap: 12px;
-        }
-
-        /* Services Section */
-        .services-section {
-            background: rgba(255,255,255,0.02);
-            border-radius: 30px;
-            padding: 60px 40px;
-            margin-bottom: 60px;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 50px;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .service-card {
-            background: linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%);
-            border: 1px solid rgba(102,126,234,0.3);
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            transition: all 0.3s;
-        }
-
-        .service-card:hover {
-            transform: scale(1.03);
-            border-color: #667eea;
-        }
-
-        .service-icon {
-            font-size: 40px;
-            margin-bottom: 15px;
-        }
-
-        .service-card h4 {
-            font-size: 20px;
-            margin-bottom: 10px;
-            color: #667eea;
-        }
-
-        .service-card p {
-            color: #a0a0b0;
-            font-size: 14px;
-            margin-bottom: 15px;
-        }
-
-        .price-tag {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 600;
         }
 
         /* Apps Section */
@@ -286,40 +338,17 @@
             font-size: 14px;
         }
 
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .fade-in {
-            animation: fadeIn 0.8s ease forwards;
-        }
-
-        /* Stats */
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            margin: 40px 0;
-            flex-wrap: wrap;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 42px;
-            font-weight: 800;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .stat-label {
-            color: #a0a0b0;
-            font-size: 14px;
+        @media (max-width: 768px) {
+            .service-detail {
+                padding: 25px;
+            }
+            .service-detail-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
         }
     </style>
 </head>
@@ -330,38 +359,283 @@
         <h1>عبدالودود الشيخ</h1>
         <p>نصمم ونبني حلول أتمتة ذكية باستخدام الذكاء الاصطناعي</p>
         <div class="tagline">🤖 Automation as a Service</div>
-        
-        <div class="stats">
-            <div class="stat-item">
-                <div class="stat-number">10+</div>
-                <div class="stat-label">Bots Active</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">24/7</div>
-                <div class="stat-label">Monitoring</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">5</div>
-                <div class="stat-label">Projects</div>
-            </div>
-        </div>
     </div>
 
     <div class="container">
+        
+        <!-- Service 1: Discord Bots -->
+        <div class="service-detail">
+            <div class="service-detail-header">
+                <div class="service-detail-icon">🤖</div>
+                <div class="service-detail-title">
+                    <h3>1. بناء Discord Bots مخصصة</h3>
+                    <span class="price">$200-500 | يوم واحد</span>
+                </div>
+            </div>
+            
+            <h4 class="service-section-title">💡 ماهو هذا الخدمة؟</h4>
+            <p style="color:#c0c0d0; margin-bottom:15px;">
+                بوت Discord هو برنامج آلي يعمل على مدار الساعة لتنفيذ مهام محددة في سيرفرك. بدلاً من إدارة السيرفر يدوياً، البوت يقوم بكل شيء تلقائياً - من إرسال الرسائل إلى تنظيم الأعضاء وإزالة المحتوى غير المناسب.
+            </p>
+            
+            <h4 class="service-section-title">🎯 ماذا يشمل؟</h4>
+            <ul>
+                <li>تصميم وبناء بوت مخصص من الصفر حسب احتياجاتك</li>
+                <li>أوامر تفاعلية (Commands) تعمل بنقرة واحدة</li>
+                <li>نظام ترحيب آلي لأعضاء الجدد مع رسائل مخصصة</li>
+                <li>نظام أدوار (Roles) تلقائي حسب نشاط الأعضاء</li>
+                <li>فلترة الرسائل والردود التلقائية</li>
+                <li>إدارة التذاكر (Ticket System) للمsupport</li>
+                <li>تقارير وإحصائيات داخل السيرفر</li>
+                <li>تكامل مع APIs خارجية (CoinGecko, News API, etc.)</li>
+            </ul>
+            
+            <div class="deliverables">
+                <h4>📦 ما ستستلمه:</h4>
+                <ul>
+                    <li>كود البوت كامل مع تعليقات</li>
+                    <li>دليل التشغيل والصيانة</li>
+                    <li>support فني لمدة 7 أيام بعد التسليم</li>
+                    <li>قائمة بجميع الأوامر المتاحة</li>
+                </ul>
+            </div>
+            
+            <div class="example-box">
+                <h4>💼 مثال حقيقي:</h4>
+                <p>بوت لسيرفر cryptocurrency يقوم بـ: إرسال أسعار العملات كل ساعة، ترحيب بالجدد، إرسال تنبيهات عند انخفاض السعر 5%، نظام نقاش نشط مع نقاط تفاعل</p>
+            </div>
+        </div>
+
+        <!-- Service 2: Auto-Content -->
+        <div class="service-detail">
+            <div class="service-detail-header">
+                <div class="service-detail-icon">📰</div>
+                <div class="service-detail-title">
+                    <h3>2. نظام نشر المحتوى التلقائي</h3>
+                    <span class="price">$50-150/شهر | اشتراك شهري</span>
+                </div>
+            </div>
+            
+            <h4 class="service-section-title">💡 ماهو هذا الخدمة؟</h4>
+            <p style="color:#c0c0d0; margin-bottom:15px;">
+                نظام آلي ينشر المحتوى نيابةً عنك على قنوات متعددة (ديسكورد، تيليجرام، تويتر) بدون أي تدخل منك. يجمع الأخبار والمحتوى من مصادر مختلفة وينشرها بصيغة محسنة لجمهورك.
+            </p>
+            
+            <h4 class="service-section-title">🎯 ماذا يشمل؟</h4>
+            <ul>
+                <li>نشر تلقائي كل 30 دقيقة أو حسب جدولك</li>
+                <li>فلترة المحتوى يدوياً أو تلقائياً</li>
+                <li>ترجمة المحتوى لـ_multiple لغات</li>
+                <li>جدولة المنشورات لأوقات الذروة</li>
+                <li>إرسال رسائل DM تلقائية للأعضاء</li>
+                <li>تتبع أفضل أنواع المحتوى (engagement tracking)</li>
+                <li>دمج مصادر متعددة (RSS, API, scrapers)</li>
+                <li>لوحة تحكم لمتابعة الأداء</li>
+            </ul>
+            
+            <div class="deliverables">
+                <h4>📦 ما ستستلمه:</h4>
+                <ul>
+                    <li>نظام نشر يعمل 24/7</li>
+                    <li>قائمة بالمصادر المستخدمة</li>
+                    <li>إحصائيات شهرية</li>
+                    <li>تقرير أداء أسبوعي</li>
+                </ul>
+            </div>
+            
+            <div class="example-box">
+                <h4>💼 مثال حقيقي:</h4>
+                <p>قناة YouTube Trending تقوم بنشر أحدث الفيديوهات الرائجة كل ساعة، مع تقييمات ومقاطع تعريفية،发送给 Discord channel مع tags مناسبة</p>
+            </div>
+        </div>
+
+        <!-- Service 3: Web Scraping -->
+        <div class="service-detail">
+            <div class="service-detail-header">
+                <div class="service-detail-icon">🔍</div>
+                <div class="service-detail-title">
+                    <h3>3. جمع البيانات من الإنترنت (Web Scraping)</h3>
+                    <span class="price">$100-300 | المشروع</span>
+                </div>
+            </div>
+            
+            <h4 class="service-section-title">💡 ماهو هذا الخدمة؟</h4>
+            <p style="color:#c0c0d0; margin-bottom:15px;">
+                عملية استخراج البيانات من المواقع والتطبيقات وتحويلها لصيغة منظمة (Excel, CSV, JSON, Database). نستخدم أدوات متقدمة لجمع البيانات الضخمة بسرعة ودقة متناهية.
+            </p>
+            
+            <h4 class="service-section-title">🎯 ماذا يشمل؟</h4>
+            <ul>
+                <li>استخراج أسعار المنتجات من مواقع متعددة</li>
+                <li>جمع آراء العملاء من منصات المراجعات</li>
+                <li>مراقبة أسعار المنافسين بشكل مستمر</li>
+                <li>استخراج بيانات من صفحات الويب المعقدة (JavaScript)</li>
+                <li>جدولة جمع البيانات تلقائياً</li>
+                <li>تنبيه عند تغير البيانات المهمة</li>
+                <li>تصدير لvarious formats (Excel, CSV, JSON, Google Sheets)</li>
+                <li>API مخصص للوصول للبيانات</li>
+            </ul>
+            
+            <div class="deliverables">
+                <h4>📦 ما ستستلمه:</h4>
+                <ul>
+                    <li>كود scraper قابل لإعادة الاستخدام</li>
+                    <li>قاعدة بيانات جاهزة</li>
+                    <li>داشبورد لمتابعة البيانات</li>
+                    <li>دليل تقني للمشروع</li>
+                </ul>
+            </div>
+            
+            <div class="example-box">
+                <h4>💼 مثال حقيقي:</h4>
+                <p>متجر إلكتروني يحتاج مراقبة أسعار 500 منتج من 10 مواقع منافسين - النظام يرسل تنبيه يومياً عند أي تغير مع تقرير сравнительном анализе</p>
+            </div>
+        </div>
+
+        <!-- Service 4: API Monitoring -->
+        <div class="service-detail">
+            <div class="service-detail-header">
+                <div class="service-detail-icon">📊</div>
+                <div class="service-detail-title">
+                    <h3>4. مراقبة APIs والتطبيقات</h3>
+                    <span class="price">$30-100/شهر | اشتراك شهري</span>
+                </div>
+            </div>
+            
+            <h4 class="service-section-title">💡 ماهو هذا الخدمة؟</h4>
+            <p style="color:#c0c0d0; margin-bottom:15px;">
+                نظام يراقب أداء وموجودية APIs والتطبيقات الخاصة بك على مدار الساعة. يرسل تنبيهات فورية عند حدوث أي مشكلة حتى تتمكن من إصلاحها قبل أي عملاء.
+            </p>
+            
+            <h4 class="service-section-title">🎯 ماذا يشمل؟</h4>
+            <ul>
+                <li>فحص HTTP/HTTPS endpoints كل 30 ثانية</li>
+                <li>قياس وقت الاستجابة (Response Time)</li>
+                <li>فحص SSL Certificates وتواريخ صلاحيتها</li>
+                <li>مراقبة DNS وDomain Expiry</li>
+                <li>تنبيهات عبر Discord/Telegram/Email/SMS</li>
+                <li>داشبورد حقيقي للـ uptime</li>
+                <li>تقرير شهري مفصل</li>
+                <li>فحص من عدة مواقع جغرافية</li>
+            </ul>
+            
+            <div class="deliverables">
+                <h4>📦 ما ستستلمه:</h4>
+                <ul>
+                    <li>داشبورد رصد مباشر</li>
+                    <li>تنبيهات فورية</li>
+                    <li>تقرير شهري PDF</li>
+                    <li>دعم تقني 24/7</li>
+                </ul>
+            </div>
+            
+            <div class="example-box">
+                <h4>💼 مثال حقيقي:</h4>
+                <p>SaaS startup يراقب 20 API endpoint - عند سقوط أي خدمة، يرسل إشعار فوري لفريق DevOps مع SLA tracking و reports للج investors</p>
+            </div>
+        </div>
+
+        <!-- Service 5: Server Setup -->
+        <div class="service-detail">
+            <div class="service-detail-header">
+                <div class="service-detail-icon">🛠️</div>
+                <div class="service-detail-title">
+                    <h3>5. إعداد سيرفر Discord كامل</h3>
+                    <span class="price">$300-800 | المشروع</span>
+                </div>
+            </div>
+            
+            <h4 class="service-section-title">💡 ماهو هذا الخدمة؟</h4>
+            <p style="color:#c0c0d0; margin-bottom:15px;">
+                تصميم وبناء سيرفر Discord احترافي من البداية. نهتم بكل شيء من الهيكل والقنوات للأدوار والبوتات، بحيث يكون السيرفر جاهز لاستقبال المجتمع الخاص بك.
+            </p>
+            
+            <h4 class="service-section-title">🎯 ماذا يشمل؟</h4>
+            <ul>
+                <li>تصميم الهيكل (Categories & Channels)</li>
+                <li>إنشاء نظام الأدوار (Roles) كامل</li>
+                <li>إعداد صلاحيات محددة لكل role</li>
+                <li>قائمة قواعد مكتوبة ومرتبة</li>
+                <li>设置 الغرفة الصوتية (Voice channels)</li>
+                <li>إنشاء template قابل لإعادة الاستخدام</li>
+                <li>ترتيب البوستات والرسائل</li>
+                <li>نصائح لإدارة المجتمع</li>
+            </ul>
+            
+            <div class="deliverables">
+                <h4>📦 ما ستستلمه:</h4>
+                <ul>
+                    <li>سيرفر جاهز 100%</li>
+                    <li>قائمة الأوامر والإعدادات</li>
+                    <li>دليل إدارة السيرفر</li>
+                    <li>support لمدة 14 يوم</li>
+                </ul>
+            </div>
+            
+            <div class="example-box">
+                <h4>💼 مثال حقيقي:</h4>
+                <p>سيرفر لمشروع crypto يحوي:.channels للمشاريع، نقاش، خبرات، مبيعات NFTs، إدارة، مع roles للمشتركين المميزين وأصحاب NFTs</p>
+            </div>
+        </div>
+
+        <!-- Service 6: Full Automation -->
+        <div class="service-detail">
+            <div class="service-detail-header">
+                <div class="service-detail-icon">🚀</div>
+                <div class="service-detail-title">
+                    <h3>6. حلول أتمتة كاملة للشركات</h3>
+                    <span class="price">$500-2000 | المشروع</span>
+                </div>
+            </div>
+            
+            <h4 class="service-section-title">💡 ماهو هذا الخدمة؟</h4>
+            <p style="color:#c0c0d0; margin-bottom:15px;">
+                حلول أتمتة مخصصة للشركات التي تحتاج أكثر من مجرد بوت أو أداة واحدة. نأخذ العملية الكاملة ونبني لها نظام أتمتة متكامل من البداية للنهاية.
+            </p>
+            
+            <h4 class="service-section-title">🎯 ماذا يشمل؟</h4>
+            <ul>
+                <li>تحليل العمليات الحالية وتحديد فرص الأتمتة</li>
+                <li>بناء Workflows مخصصة</li>
+                <li>تكامل مع الأنظمة الموجودة (CRMs, ERPs, APIs)</li>
+                <li>أتمتة الردود على الرسائل</li>
+                <li>أتمتة جمع وإدارة البيانات</li>
+                <li>أتمتة التقارير والإشعارات</li>
+                <li>بناء داشبورد مخصص</li>
+                <li>دعم وصيانة مستمرة</li>
+            </ul>
+            
+            <div class="deliverables">
+                <h4>📦 ما ستستلمه:</h4>
+                <ul>
+                    <li>نظام أتمتة كامل</li>
+                    <li>داشبورد مخصص</li>
+                    <li>وثائق تقنية كاملة</li>
+                    <li>دعم لمدة 30 يوم</li>
+                    <li>training للموظفين</li>
+                </ul>
+            </div>
+            
+            <div class="example-box">
+                <h4>💼 مثال حقيقي:</h4>
+                <p>شركة ecommerce تحتاج: أتمتة طلبات الشراء، تحديث المخزون، إرسال emails، التقاط التقييمات، تقرير يومي، webhook للتواصل مع شركات الشحن</p>
+            </div>
+        </div>
+
         <!-- Products Section -->
         <section class="products">
             <div class="product-card fade-in">
                 <div class="product-icon">🤖</div>
                 <h3>Hermes Agent</h3>
-                <p>وكيل ذكاء اصطناعي متعدد المهام - ينفذ تلقائياً cron jobs، يرسل التحديثات، يدير سيرفرات Discord، ويجيب على الاستفسارات</p>
-                <a href="#" class="product-link">Learn more →</a>
+                <p>وكيل ذكاء اصطناعي متعدد المهام - ينفذ تلقائياً cron jobs، يرسل التحديثات، يدير سيرفرات Discord، ويجيب على الاستفسارات 24/7</p>
+                <a href="https://hermes-agent.nousresearch.com" class="product-link" target="_blank">Documentation →</a>
             </div>
 
             <div class="product-card fade-in">
                 <div class="product-icon">🦞</div>
                 <h3>OpenClaw</h3>
-                <p>أدوات أتمتة مفتوحة المصدر -Scraping, posting, monitoring, data collection - كل ما تحتاجه للأتمتة</p>
-                <a href="#" class="product-link">Learn more →</a>
+                <p>أدوات أتمتة مفتوحة المصدر - Scraping, posting, monitoring, data collection - كل ما تحتاجه للأتمتة</p>
+                <a href="https://github.com/abdelsidi" class="product-link" target="_blank">GitHub →</a>
             </div>
         </section>
 
@@ -398,68 +672,20 @@
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section class="services-section">
-            <h2 class="section-title">🚀 خدماتنا</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🤖</div>
-                    <h4>Discord Bots</h4>
-                    <p>بوتات مخصصة لسيرفرات Discord - أوامر، أتمتة، مراقبة</p>
-                    <div class="price-tag">$200-500</div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">📰</div>
-                    <h4>Auto-Content</h4>
-                    <p>نشر تلقائي للمحتوى - أخبار، تحديثات، إشعارات</p>
-                    <div class="price-tag">$50-150/mo</div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🔍</div>
-                    <h4>Web Scraping</h4>
-                    <p>جمع البيانات من المواقع - أسعار، أخبار، معلومات</p>
-                    <div class="price-tag">$100-300</div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">📊</div>
-                    <h4>API Monitoring</h4>
-                    <p>مراقبة APIs والتطبيقات - uptime، أداء، تنبيهات</p>
-                    <div class="price-tag">$30-100/mo</div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🛠️</div>
-                    <h4>Server Setup</h4>
-                    <p>إعداد سيرفرات Discord كاملة - روابط، أدوار، قنوات</p>
-                    <div class="price-tag">$300-800</div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🚀</div>
-                    <h4>Full Automation</h4>
-                    <p>حلول أتمتة كاملة للشركات - workflows، integrations</p>
-                    <div class="price-tag">$500-2000</div>
-                </div>
-            </div>
-        </section>
-
         <!-- Contact Section -->
         <section class="contact-section">
             <h2>📬 تواصل معنا</h2>
-            <p> جاهزين لمساعدتك في مشروعك القادم</p>
+            <p>جاهزين لمساعدتك في مشروعك القادم</p>
             
             <div class="social-links">
                 <a href="https://github.com/abdelsidi" class="social-link" target="_blank">
                     <span>🐙</span> GitHub
                 </a>
-                <a href="#" class="social-link">
+                <a href="https://discord.gg/" class="social-link" target="_blank">
                     <span>💬</span> Discord
                 </a>
-                <a href="#" class="social-link">
-                    <span>📧</span> Email
+                <a href="https://t.me/" class="social-link" target="_blank">
+                    <span>📧</span> Telegram
                 </a>
             </div>
         </section>
