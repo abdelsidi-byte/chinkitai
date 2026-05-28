@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChinkitAI | أتمتة ذكية لعملك</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(180deg, rgba(99,102,241,0.1) 0%, transparent 100%);
+            border-radius: 0 0 100px 100px;
+            margin-bottom: 60px;
+        }
+
+        .logo {
+            font-size: 48px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #a0a0b0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .tagline {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 8px 24px;
+            border-radius: 30px;
+            font-size: 14px;
+            margin-top: 25px;
+        }
+
+        /* Products Section */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .product-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 35px;
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            border-color: #667eea;
+            box-shadow: 0 20px 60px rgba(102,126,234,0.3);
+        }
+
+        .product-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .product-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+
+        .product-card p {
+            color: #a0a0b0;
+            margin-bottom: 20px;
+        }
+
+        .product-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .product-link:hover {
+            color: #764ba2;
+            gap: 12px;
+        }
+
+        /* Services Section */
+        .services-section {
+            background: rgba(255,255,255,0.02);
+            border-radius: 30px;
+            padding: 60px 40px;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%);
+            border: 1px solid rgba(102,126,234,0.3);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            transform: scale(1.03);
+            border-color: #667eea;
+        }
+
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #667eea;
+        }
+
+        .service-card p {
+            color: #a0a0b0;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .price-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* Apps Section */
+        .apps-section {
+            margin-bottom: 60px;
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .app-card {
+            position: relative;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .app-card:hover {
+            border-color: #667eea;
+            transform: translateY(-5px);
+        }
+
+        .app-preview {
+            height: 200px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+        }
+
+        .app-info {
+            padding: 25px;
+        }
+
+        .app-info h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .app-info p {
+            color: #a0a0b0;
+            margin-bottom: 15px;
+        }
+
+        .app-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, rgba(102,126,234,0.15) 0%, rgba(118,75,162,0.15) 100%);
+            border-radius: 30px;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .contact-section p {
+            color: #a0a0b0;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 12px 25px;
+            border-radius: 30px;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-link:hover {
+            background: #667eea;
+            border-color: #667eea;
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #a0a0b0;
+            font-size: 14px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        /* Stats */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 42px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            color: #a0a0b0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="logo">ChinkitAI</div>
+        <h1>عبدالودود الشيخ</h1>
+        <p>نصمم ونبني حلول أتمتة ذكية باستخدام الذكاء الاصطناعي</p>
+        <div class="tagline">🤖 Automation as a Service</div>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Bots Active</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Monitoring</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Projects</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Products Section -->
+        <section class="products">
+            <div class="product-card fade-in">
+                <div class="product-icon">🤖</div>
+                <h3>Hermes Agent</h3>
+                <p>وكيل ذكاء اصطناعي متعدد المهام - ينفذ تلقائياً cron jobs، يرسل التحديثات، يدير سيرفرات Discord، ويجيب على الاستفسارات</p>
+                <a href="#" class="product-link">Learn more →</a>
+            </div>
+
+            <div class="product-card fade-in">
+                <div class="product-icon">🦞</div>
+                <h3>OpenClaw</h3>
+                <p>أدوات أتمتة مفتوحة المصدر -Scraping, posting, monitoring, data collection - كل ما تحتاجه للأتمتة</p>
+                <a href="#" class="product-link">Learn more →</a>
+            </div>
+        </section>
+
+        <!-- Apps Section -->
+        <section class="apps-section">
+            <h2 class="section-title">🌟 مشاريعنا</h2>
+            <div class="apps-grid">
+                <div class="app-card">
+                    <div class="app-preview">🇫🇷</div>
+                    <div class="app-info">
+                        <h3>French Kids App</h3>
+                        <p>تطبيق تفاعلي لتعليم الفرنسية للأطفال - ألعاب، صور، أصوات</p>
+                        <a href="https://french-kids-app.vercel.app/" class="app-link" target="_blank">Visit App →</a>
+                    </div>
+                </div>
+
+                <div class="app-card">
+                    <div class="app-preview">🎨</div>
+                    <div class="app-info">
+                        <h3>Kids Coloring</h3>
+                        <p>تطبيق رسم للأطفال - صفحات تلوين تفاعلية مع ألوان وأدوات</p>
+                        <a href="https://kidscolor.vercel.app/kids-coloring.html" class="app-link" target="_blank">Visit App →</a>
+                    </div>
+                </div>
+
+                <div class="app-card">
+                    <div class="app-preview">💎</div>
+                    <div class="app-info">
+                        <h3>Crypto Tracker</h3>
+                        <p>تطبيق تتبع أسعار العملات الرقمية - أسعار حية، رسومات بيانية، محافظ</p>
+                        <a href="https://abdelsidi.github.io/crypto-tracker/" class="app-link" target="_blank">Visit App →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section">
+            <h2 class="section-title">🚀 خدماتنا</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🤖</div>
+                    <h4>Discord Bots</h4>
+                    <p>بوتات مخصصة لسيرفرات Discord - أوامر، أتمتة، مراقبة</p>
+                    <div class="price-tag">$200-500</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📰</div>
+                    <h4>Auto-Content</h4>
+                    <p>نشر تلقائي للمحتوى - أخبار، تحديثات، إشعارات</p>
+                    <div class="price-tag">$50-150/mo</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h4>Web Scraping</h4>
+                    <p>جمع البيانات من المواقع - أسعار، أخبار، معلومات</p>
+                    <div class="price-tag">$100-300</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h4>API Monitoring</h4>
+                    <p>مراقبة APIs والتطبيقات - uptime، أداء، تنبيهات</p>
+                    <div class="price-tag">$30-100/mo</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🛠️</div>
+                    <h4>Server Setup</h4>
+                    <p>إعداد سيرفرات Discord كاملة - روابط، أدوار، قنوات</p>
+                    <div class="price-tag">$300-800</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h4>Full Automation</h4>
+                    <p>حلول أتمتة كاملة للشركات - workflows، integrations</p>
+                    <div class="price-tag">$500-2000</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <h2>📬 تواصل معنا</h2>
+            <p> جاهزين لمساعدتك في مشروعك القادم</p>
+            
+            <div class="social-links">
+                <a href="https://github.com/abdelsidi" class="social-link" target="_blank">
+                    <span>🐙</span> GitHub
+                </a>
+                <a href="#" class="social-link">
+                    <span>💬</span> Discord
+                </a>
+                <a href="#" class="social-link">
+                    <span>📧</span> Email
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2026 ChinkitAI | عبدالودود الشيخ | جميع الحقوق محفوظة</p>
+        </div>
+    </div>
+</body>
+</html>
